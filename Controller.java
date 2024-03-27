@@ -29,9 +29,6 @@ public class Controller {
     
     @FXML
     public void handleSaisirUnStageButtonClick(ActionEvent event) {
-        System.out.println("Bouton 'Saisir un stage' cliqué !");
-        
-        // Charger la page "Page_Ajout_Stage.fxml"
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Page_Ajout_Stage.fxml"));
         Parent root;
         try {
@@ -47,7 +44,6 @@ public class Controller {
     }
         @FXML
     public void handleListeStageButtonClick(ActionEvent event) {
-        if (event.getSource() == btnListeStages) {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Page 4 - Tableau de stage.fxml"));
             Parent root;
             try {
@@ -61,6 +57,5 @@ public class Controller {
                 e.printStackTrace();
             }
         }
-    }
 }
 
