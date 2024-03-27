@@ -28,7 +28,7 @@ public class Controller {
 
     
     @FXML
-    public void handleSaisirUnStageButtonClick(ActionEvent event) {
+    public void handleSaisirUnStageButtonClickflo(ActionEvent event) {
         System.out.println("Bouton 'Saisir un stage' cliqué !");
         
         // Charger la page "Page_Ajout_Stage.fxml"
@@ -46,7 +46,7 @@ public class Controller {
         }
     }
         @FXML
-    public void handleButtonClick(ActionEvent event) {
+    public void handleButtonClickflo(ActionEvent event) {
         if (event.getSource() == btnListeStages) {
             try {
                 // Charger la vue "Page 4 - Tableau de stage.fxml"
