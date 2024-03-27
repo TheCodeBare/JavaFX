@@ -1,3 +1,5 @@
+package ProjetIHM;
+
 import java.sql.*;
 import java.util.Scanner;
 
