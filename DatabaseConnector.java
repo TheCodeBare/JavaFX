@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class DatabaseConnector {
     public static Connection connect() {
         try {
-            String DB_URL = "jdbc:sqlite:BDIHM.db";
+            String DB_URL = "jdbc:sqlite:BDDIHM.db";
             Connection conn = DriverManager.getConnection(DB_URL);
             System.out.println("Connexion Ã  la base de données SQLite Ã©tablie !");
             return conn;
