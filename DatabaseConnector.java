@@ -5,7 +5,7 @@ public class DatabaseConnector {
         try {
             String DB_URL = "jdbc:sqlite:BDIHM.db";
             Connection conn = DriverManager.getConnection(DB_URL);
-            System.out.println("Connexion Ã  la base de donnÃ©es SQLite Ã©tablie !");
+            System.out.println("Connexion Ã  la base de données SQLite Ã©tablie !");
             return conn;
         } catch (SQLException e) {
             System.out.println(e.getMessage());
