@@ -41,27 +41,6 @@
       <Text layoutX="167.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Mail :" wrappingWidth="66.13671875" />
       <Text layoutX="377.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Facebook :" wrappingWidth="66.13671875" />
       <Text layoutX="377.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Instagram :" wrappingWidth="74.93670654296875" />
-      <MenuBar layoutX="-1.0" prefHeight="17.0" prefWidth="600.0" style="-fx-background-color: #dc1010;" stylesheets="@GPHY-Stage-copy-copy/Scenebuilder.css">
-        <menus>
-          <Menu mnemonicParsing="false" style="-fx-background-color: #ffff; -fx-text-fill: #dc1010;" text="Saisir un stage">
-            <items>
-              <MenuItem mnemonicParsing="false" style="-fx-text-fill: #000000;" text="Close" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" style="-fx-background-color: #ffff;" text="Liste des stages">
-            <items>
-              <MenuItem mnemonicParsing="false" style="-fx-text-fill: #000000;" text="Delete" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" style="-fx-background-color: #ffff;" text="Aide">
-            <items>
-              <MenuItem mnemonicParsing="false" style="-fx-text-fill: #000000;" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
       <ImageView fitHeight="83.0" fitWidth="141.0" layoutX="-1.0" layoutY="322.0">
          <image>
             <Image url="@image-removebg-preview%20(2).png" />
@@ -82,5 +61,27 @@
       <Text layoutX="163.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="alors viens inscrire ces informations. " />
       <Text layoutX="163.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tu peux accéder aux différentes options du site avec le" />
       <Text layoutX="163.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="menu en haut de l'application" />
+      <MenuBar layoutX="-1.0" prefHeight="27.0" prefWidth="600.0" style="-fx-background-color: #dc1010;">
+        <menus>
+          <Menu mnemonicParsing="false" text="Saisir un stage">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Liste des stages">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Aide">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
    </children>
 </Pane>
