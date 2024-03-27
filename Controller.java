@@ -28,7 +28,7 @@ public class Controller {
 
     
     @FXML
-    public void handleSaisirUnStageButtonClickflo(ActionEvent event) {
+    public void handleSaisirUnStageButtonClick(ActionEvent event) {
         System.out.println("Bouton 'Saisir un stage' cliqué !");
         
         // Charger la page "Page_Ajout_Stage.fxml"
@@ -46,23 +46,17 @@ public class Controller {
         }
     }
         @FXML
-    public void handleButtonClickflo(ActionEvent event) {
+    public void handleListeStageButtonClick(ActionEvent event) {
         if (event.getSource() == btnListeStages) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Page 4 - Tableau de stage.fxml"));
+            Parent root;
             try {
-                // Charger la vue "Page 4 - Tableau de stage.fxml"
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("Page 4 - Tableau de stage.fxml"));
-                Parent root = loader.load();
-                
-                // Créer une nouvelle scène avec la vue chargée
-                Scene scene = new Scene(root);
-                
-                // Accéder au stage principal à partir de l'événement
-                Stage stage = (Stage) btnListeStages.getScene().getWindow();
-                
-                // Définir la nouvelle scène sur le stage
-                stage.setScene(scene);
-                stage.setTitle("Page 4 - Tableau de stage");
-                stage.show();
+            root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setTitle("Page liste Stage");
+            stage.show();
             } catch (Exception e) {
                 e.printStackTrace();
             }
