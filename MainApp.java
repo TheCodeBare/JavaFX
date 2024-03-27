@@ -1,16 +1,3 @@
-import javafx.scene.layout.*;
-import javafx.scene.paint.*;
-import javafx.scene.canvas.*;
-import javafx.application.*;
-import javafx.scene.*;
-import javafx.scene.control.*;
-import javafx.scene.input.*;
-import javafx.event.*;
-import javafx.embed.swing.*;
-import javafx.stage.*;
-import javafx.scene.shape.*;
-
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -25,12 +12,12 @@ public class MainApp extends Application {
             // Charger le fichier FXML
             Parent root = FXMLLoader.load(getClass().getResource("Accueil.fxml"));
            
-            // CrÃ©er la scÃ¨ne et y mettre le fichier FXML chargÃ©
+            // Créer la scène et y mettre le fichier FXML chargé
             Scene scene = new Scene(root);
            
             // Configurer le stage et afficher
             primaryStage.setScene(scene);
-            primaryStage.setTitle("Titre de votre application");
+            primaryStage.setTitle("Accueil");
             primaryStage.show();
         } catch(Exception e) {
             e.printStackTrace();
