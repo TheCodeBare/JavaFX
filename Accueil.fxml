@@ -65,13 +65,13 @@
         <menus>
           <Menu mnemonicParsing="false" onAction="#handleSaisirUnStageButtonClick" text="Saisir un stage">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#handleSaisirUnStageButtonClick" text="Ajouter un stage" />
+              <MenuItem mnemonicParsing="false" onAction="#handleListeStageButtonClick" text="Ajouter un stage" />
                   <SeparatorMenuItem mnemonicParsing="false" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Liste des stages">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#handleButtonClick" text="Liste de stage" />
+              <MenuItem mnemonicParsing="false" onAction="#handleListeStageButtonClick" text="Liste de stage" />
                   <SeparatorMenuItem mnemonicParsing="false" />
             </items>
           </Menu>
