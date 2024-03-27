@@ -12,4 +12,5 @@ public class Controller {
         System.out.println("Bouton cliqué !");
         // Ajoutez ici le code pour gérer l'événement du bouton
     }
+
 }
