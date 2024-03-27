@@ -5,7 +5,7 @@ public class DatabaseConnector {
         try {
             String DB_URL = "jdbc:sqlite:BDDIHM.db";
             Connection conn = DriverManager.getConnection(DB_URL);
-            System.out.println("Connexion Ã  la base de données SQLite Ã©tablie !");
+            System.out.println("Connexion à la base de données SQLite établie !");
             return conn;
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -17,7 +17,7 @@ public class DatabaseConnector {
         try {
             if (conn != null) {
                 conn.close();
-                System.out.println("DÃ©connexion de la base de donnÃ©es SQLite !");
+                System.out.println("Déconnexion de la base de données SQLite !");
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -47,11 +47,11 @@ public class DatabaseConnector {
                             String nom_structureAjout = scanner.next();
                             System.out.print("Sujet du stage : ");
                             String sujet_stageAjout = scanner.next();
-                            System.out.print("Mois de dÃ©but du stage : ");
+                            System.out.print("Mois de début du stage : ");
                             String mois_debut_stageAjout = scanner.next();
-                            System.out.print("DurÃ©e du stage (en mois) : ");
+                            System.out.print("Durée du stage (en mois) : ");
                             int duree_stageAjout = scanner.nextInt();
-                            System.out.print("Promotion de l'Ã©tudiant : ");
+                            System.out.print("Promotion de l'étudiant : ");
                             String promotion_etudiantAjout = scanner.next();
 
                             Stage.ajouterStage(conn, nom_structureAjout, sujet_stageAjout, mois_debut_stageAjout, duree_stageAjout, promotion_etudiantAjout);
@@ -61,17 +61,17 @@ public class DatabaseConnector {
                             System.out.println("Modification d'un stage :");
                             System.out.println("Voici tous les stages :");
                             Stage.afficherTousLesStages(conn);
-                            System.out.print("ID du stage Ã  modifier : ");
+                            System.out.print("ID du stage à modifier : ");
                             int idModification = scanner.nextInt();
                             System.out.print("Nouveau nom de la structure : ");
                             String nouveauNom_structure = scanner.next();
                             System.out.print("Nouveau sujet du stage : ");
                             String nouveauSujet_stage = scanner.next();
-                            System.out.print("Nouveau mois de dÃ©but du stage : ");
+                            System.out.print("Nouveau mois de début du stage : ");
                             String nouveauMois_debut_stage = scanner.next();
-                            System.out.print("Nouvelle durÃ©e du stage (en mois) : ");
+                            System.out.print("Nouvelle durée du stage (en mois) : ");
                             int nouvelleDuree_stage = scanner.nextInt();
-                            System.out.print("Nouvelle promotion de l'Ã©tudiant : ");
+                            System.out.print("Nouvelle promotion de l'étudiant : ");
                             String nouvellePromotion_etudiant = scanner.next();
 
                             Stage.modifierStage(conn, idModification, nouveauNom_structure, nouveauSujet_stage, nouveauMois_debut_stage, nouvelleDuree_stage, nouvellePromotion_etudiant);
@@ -81,7 +81,7 @@ public class DatabaseConnector {
                             System.out.println("Suppression d'un stage :");
                             System.out.println("Voici tous les stages :");
                             Stage.afficherTousLesStages(conn);
-                            System.out.print("ID du stage Ã  supprimer : ");
+                            System.out.print("ID du stage à supprimer : ");
                             int idSuppression = scanner.nextInt();
                             Stage.supprimerStage(conn, idSuppression);
                             break;
