@@ -63,9 +63,9 @@
       <Text layoutX="163.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="menu en haut de l'application" />
       <MenuBar id="barremenu" layoutX="-1.0" prefHeight="27.0" prefWidth="600.0" style="-fx-background-color: #dc1010;">
         <menus>
-          <Menu mnemonicParsing="false" onAction="#handleSaisirUnStageButtonClick" text="Saisir un stage">
+          <Menu mnemonicParsing="false" text="Saisir un stage">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#handleListeStageButtonClick" text="Ajouter un stage" />
+              <MenuItem mnemonicParsing="false" onAction="#handleSaisirUnStageButtonClick" text="Ajouter un stage" />
                   <SeparatorMenuItem mnemonicParsing="false" />
             </items>
           </Menu>
