@@ -41,7 +41,7 @@ public class Controller {
             e.printStackTrace();
         }
     }
-    @FXML
+        @FXML
     public void handleButtonClick(ActionEvent event) {
         if (event.getSource() == btnListeStages) {
             try {
