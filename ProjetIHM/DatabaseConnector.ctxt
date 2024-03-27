@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=DatabaseConnector
-comment1.params=
-comment1.target=java.sql.Connection\ connect()
-comment2.params=conn
-comment2.target=void\ disconnect(java.sql.Connection)
-comment3.params=args
-comment3.target=void\ main(java.lang.String[])
-numComments=4
