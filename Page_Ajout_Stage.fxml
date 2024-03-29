@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -12,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="contentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dc1010" height="45.0" layoutX="174.0" layoutY="45.0" stroke="BLACK" strokeType="INSIDE" width="252.0" />
       <Text fill="WHITE" layoutX="201.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GPHY - STAGES" wrappingWidth="198.4964599609375">
@@ -50,25 +51,6 @@
             <Image url="@Capture_d_écran_2024-03-20_à_17.06.56-removebg-preview.png" />
          </image>
       </ImageView>
-      <MenuBar layoutX="-1.0" prefHeight="17.0" prefWidth="600.0" style="-fx-background-color: #efefef;">
-        <menus>
-          <Menu mnemonicParsing="false" style="-fx-background-color: #ffff;" text="Saisir un stage">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" style="-fx-background-color: #ffff;" text="Liste des stages">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" style="-fx-background-color: #ffff;" text="Aide">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
       <Text layoutX="106.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Durée stage (mois):" wrappingWidth="122.27008056640625" />
       <Button layoutX="271.0" layoutY="335.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #dc1010; -fx-border-color: #000000;" text="Annuler" />
       <Button layoutX="373.0" layoutY="335.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #4bcc37; -fx-border-color: #000000;" text="Valider" />
@@ -77,5 +59,27 @@
       <TextField layoutX="201.0" layoutY="188.0" />
       <TextField layoutX="247.0" layoutY="238.0" prefHeight="17.0" prefWidth="149.0" />
       <TextField layoutX="225.0" layoutY="282.0" />
+      <MenuBar id="barremenu" prefHeight="27.0" prefWidth="600.0" style="-fx-background-color: #dc1010;">
+         <menus>
+            <Menu mnemonicParsing="false" text="Saisir un stage">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleSaisirUnStageButtonClick" text="Ajouter un stage" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Liste des stages">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleListeStageButtonClick" text="Liste de stage" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Aide">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
    </children>
 </Pane>
