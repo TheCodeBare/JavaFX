@@ -79,6 +79,12 @@
                   <SeparatorMenuItem mnemonicParsing="false" />
                </items>
             </Menu>
+            <Menu mnemonicParsing="false" onAction="#handleQuitterButtonClick" text="Quitter">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleQuitterButtonClick" text="Quitter" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+               </items>
+            </Menu>
          </menus>
       </MenuBar>
    </children>

@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.Pane;
 import javafx.event.ActionEvent;
 import javafx.stage.Stage;
+import javafx.application.Platform;
 
 public class Controller {
 
@@ -41,5 +42,12 @@ public class Controller {
             e.printStackTrace();
         }
     }
+    
+    
+    public void handleQuitterButtonClick(ActionEvent event) {
+        // Fermer proprement l'application
+        Platform.exit();
+    }
+    
 }
     
