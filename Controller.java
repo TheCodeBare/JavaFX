@@ -12,11 +12,12 @@ public class Controller {
     
     @FXML
     private MenuBar menubarre;
-    
     @FXML
     private Button saisirUnStageButton;
     @FXML
     private Button btnListeStages;
+    @FXML
+    private Button btnHelp;
     
     @FXML
     public void initialize() {
@@ -38,24 +39,52 @@ public class Controller {
             stage.setScene(scene);
             stage.setTitle("Page Ajout Stage");
             stage.show();
+
+            // Fermer la fenêtre actuelle (Accueil)
+            Stage accueilStage = (Stage) saisirUnStageButton.getScene().getWindow();
+            accueilStage.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-        @FXML
+    
+    @FXML
     public void handleListeStageButtonClick(ActionEvent event) {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Page 4 - Tableau de stage.fxml"));
-            Parent root;
-            try {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Page 4 - Tableau de stage.fxml"));
+        Parent root;
+        try {
             root = loader.load();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.setTitle("Page liste Stage");
             stage.show();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-}
 
+            // Fermer la fenêtre actuelle (Accueil)
+            Stage accueilStage = (Stage) btnListeStages.getScene().getWindow();
+            accueilStage.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
+    public void handleHelpButtonClick(ActionEvent event) {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Page 5 - Aide.fxml"));
+        Parent root;
+        try {
+            root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setTitle("Page liste Stage");
+            stage.show();
+
+            // Fermer la fenêtre actuelle (Accueil)
+            Stage accueilStage = (Stage) btnHelp.getScene().getWindow();
+            accueilStage.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
