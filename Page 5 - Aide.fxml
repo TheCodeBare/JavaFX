@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<Pane fx:id="contentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dc1010" height="45.0" layoutX="174.0" layoutY="45.0" stroke="BLACK" strokeType="INSIDE" width="252.0" />
       <Text fill="WHITE" layoutX="204.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GPHY - STAGES" wrappingWidth="192.096435546875">
@@ -53,9 +53,9 @@
       </Text>
       <Text layoutX="153.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pour une autre question, envoyez un mail à cette adresse : xxxx.xxx@gmail.com" wrappingWidth="341.3367156982422" />
       <Text layoutX="204.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Foire aux questions :" />
-      <Text layoutX="204.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comment modifier un stage ?" />
-      <Text layoutX="204.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Je ne peux pas annuler ma saisie ?" />
-      <Text layoutX="204.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comment supprimer un stage ?" />
+      <Text layoutX="49.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comment modifier un stage ?" />
+      <Text layoutX="50.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Je ne peux pas annuler ma saisie ?" />
+      <Text layoutX="49.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comment supprimer un stage ?" />
       <MenuBar id="barremenu" prefHeight="27.0" prefWidth="600.0" style="-fx-background-color: #dc1010;">
          <menus>
             <Menu mnemonicParsing="false" text="Saisir un stage">
@@ -66,7 +66,7 @@
             </Menu>
             <Menu mnemonicParsing="false" text="Liste des stages">
                <items>
-                  <MenuItem mnemonicParsing="false" onAction="#handleListeStageButtonClick" text="Liste des stages" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleListeStageButtonClick" text="Liste de stage" />
                   <SeparatorMenuItem mnemonicParsing="false" />
                </items>
             </Menu>
@@ -76,7 +76,7 @@
                   <SeparatorMenuItem mnemonicParsing="false" />
                </items>
             </Menu>
-            <Menu mnemonicParsing="false" text="Quitter">
+            <Menu mnemonicParsing="false" onAction="#handleQuitterButtonClick" text="Quitter">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#handleQuitterButtonClick" text="Quitter" />
                   <SeparatorMenuItem mnemonicParsing="false" />
@@ -84,5 +84,8 @@
             </Menu>
          </menus>
       </MenuBar>
+      <Text layoutX="221.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avec le bouton modifier dans Liste des Stages" />
+      <Text layoutX="241.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Si, avec le bouton annuler lors de la saisie" />
+      <Text layoutX="221.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En le sélectionnant puis en appuyant sur le bouton supprimer" />
    </children>
 </Pane>
