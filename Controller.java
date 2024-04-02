@@ -43,6 +43,10 @@ public class Controller {
         }
     }
     
+    @FXML
+    public void handleAideButtonClick(ActionEvent event) {
+        loadPage("Page 5 - Aide.fxml", "Page Aide");
+    }
     
     public void handleQuitterButtonClick(ActionEvent event) {
         // Fermer proprement l'application

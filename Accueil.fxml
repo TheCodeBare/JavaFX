@@ -77,13 +77,13 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Aide">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem mnemonicParsing="false" onAction="#handleAideButtonClick" text="FAQ" />
                   <SeparatorMenuItem mnemonicParsing="false" />
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Quitter">
                <items>
-                  <MenuItem mnemonicParsing="false" onAction="#handleQuitterButtonClick" text="Quitter" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleQuitterButtonClick" text="Quitter l'application" />
                   <SeparatorMenuItem mnemonicParsing="false" />
                </items>
             </Menu>

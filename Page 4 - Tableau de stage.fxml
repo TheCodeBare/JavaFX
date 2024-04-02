@@ -73,13 +73,13 @@
             </Menu>
             <Menu mnemonicParsing="false" text="Liste des stages">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Liste des stages" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleListeStageButtonClick" text="Liste des stages" />
                   <SeparatorMenuItem mnemonicParsing="false" />
                </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Aide">
                <items>
-                  <MenuItem mnemonicParsing="false" text="About" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleAideButtonClick" text="FAQ" />
                   <SeparatorMenuItem mnemonicParsing="false" />
                </items>
             </Menu>
