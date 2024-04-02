@@ -1,33 +1,51 @@
+import java.io.IOException;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.MenuBar;
+import javafx.event.ActionEvent;
+import javafx.stage.Stage;
 
-/**
- * Décrivez votre classe ControllerA ici.
- *
- * @author (votre nom)
- * @version (un numéro de version ou une date)
- */
-public class ControllerA
-{
-    // variables d'instance - remplacez l'exemple qui suit par le vôtre
-    private int x;
-
-    /**
-     * Constructeur d'objets de classe ControllerA
-     */
-    public ControllerA()
-    {
-        // initialisation des variables d'instance
-        x = 0;
+public class ControllerA {
+    
+    @FXML
+    private MenuBar menubarre;
+    
+    @FXML
+    private Button saisirUnStageButton;
+    @FXML
+    private Button btnListeStages;
+    
+    @FXML
+    public void initialize() {
+        // Vous pouvez initialiser des éléments ici si nécessaire
     }
 
-    /**
-     * Un exemple de méthode - remplacez ce commentaire par le vôtre
-     *
-     * @param  y   le paramètre de la méthode
-     * @return     la somme de x et de y
-     */
-    public int sampleMethod(int y)
-    {
-        // Insérez votre code ici
-        return x + y;
+        @FXML
+    public void handleButtonClickA(ActionEvent event) {
+        if (event.getSource() == btnListeStages) {
+            try {
+                // Charger la vue "Page 4 - Tableau de stage.fxml"
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("Page 4 - Tableau de stage.fxml"));
+                Parent root = loader.load();
+                
+                // Créer une nouvelle scène avec la vue chargée
+                Scene scene = new Scene(root);
+                
+                // Accéder au stage principal à partir de l'événement
+                Stage stage = (Stage) btnListeStages.getScene().getWindow();
+                
+                // Définir la nouvelle scène sur le stage
+                stage.setScene(scene);
+                stage.setTitle("Page 4 - Tableau de stage");
+                stage.show();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
+
+
