@@ -49,5 +49,4 @@ public class Controller {
         Platform.exit();
     }
     
-}   
-    
+}

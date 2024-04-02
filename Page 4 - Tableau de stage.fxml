@@ -7,6 +7,7 @@
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
@@ -91,5 +92,6 @@
             </Menu>
          </menus>
       </MenuBar>
+      <TextField fx:id="searchField" layoutX="263.0" layoutY="84.0" prefHeight="0.0" prefWidth="124.0" />
    </children>
 </Pane>
