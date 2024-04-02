@@ -43,9 +43,11 @@ public class Controller {
         }
     }
     
+    
     public void handleQuitterButtonClick(ActionEvent event) {
         // Fermer proprement l'application
         Platform.exit();
     }
     
 }
+    
