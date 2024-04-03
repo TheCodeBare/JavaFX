@@ -53,12 +53,12 @@
       </ImageView>
       <Text layoutX="106.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Durée stage (mois):" wrappingWidth="122.27008056640625" />
       <Button layoutX="271.0" layoutY="335.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #dc1010; -fx-border-color: #000000;" text="Annuler" />
-      <Button layoutX="373.0" layoutY="335.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #4bcc37; -fx-border-color: #000000;" text="Valider" />
-      <TextField layoutX="184.0" layoutY="147.0" prefHeight="25.0" prefWidth="101.0" />
-      <TextField layoutX="365.0" layoutY="147.0" prefHeight="25.0" prefWidth="122.0" />
-      <TextField layoutX="201.0" layoutY="188.0" />
-      <TextField layoutX="247.0" layoutY="238.0" prefHeight="17.0" prefWidth="149.0" />
-      <TextField layoutX="225.0" layoutY="282.0" />
+      <Button id="Validé" layoutX="373.0" layoutY="335.0" mnemonicParsing="false" onAction="#ajouterStageFromForm" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #4bcc37; -fx-border-color: #000000;" text="Valider" />
+      <TextField id="promotion" layoutX="184.0" layoutY="147.0" prefHeight="25.0" prefWidth="101.0" />
+      <TextField id="siege" layoutX="365.0" layoutY="147.0" prefHeight="25.0" prefWidth="122.0" />
+      <TextField id="sujetStage" layoutX="201.0" layoutY="188.0" />
+      <TextField id="debutMois" layoutX="247.0" layoutY="238.0" prefHeight="17.0" prefWidth="149.0" />
+      <TextField id="duree" layoutX="225.0" layoutY="282.0" />
       <MenuBar id="barremenu" prefHeight="27.0" prefWidth="600.0" style="-fx-background-color: #dc1010;">
          <menus>
             <Menu mnemonicParsing="false" text="Saisir un stage">

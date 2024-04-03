@@ -106,4 +106,15 @@ public class DatabaseConnector {
             }
         }
     }
+    public static void ajouterStage(Connection connexion, String nom_structure, String sujet_stage, String mois_debut_stage, int duree_stage, String promotion_etudiant) throws SQLException {
+        String sql = "INSERT INTO Stage ( nom_structure, sujet_stage, mois_debut_stage, duree_stage, promotion_etudiant) VALUES (?, ?, ?, ?, ?)";
+        try (PreparedStatement statement = connexion.prepareStatement(sql)) {
+            statement.setString(1, nom_structure);
+            statement.setString(2, sujet_stage);
+            statement.setString(3, mois_debut_stage);
+            statement.setInt(4, duree_stage);
+            statement.setString(5, promotion_etudiant);
+            statement.executeUpdate();
+        }
+    }
 }

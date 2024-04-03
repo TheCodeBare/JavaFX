@@ -5,16 +5,34 @@ import javafx.scene.layout.Pane;
 import javafx.event.ActionEvent;
 import javafx.stage.Stage;
 import javafx.application.Platform;
+import javafx.scene.control.TextField;
+import java.sql.Connection;
+import java.sql.SQLException;
+
 
 public class Controller {
-
+    private Connection conn;
     @FXML
     private Pane contentPane;
 
     private Stage primaryStage;
+    
+    @FXML
+    private TextField promotionField;
+    @FXML
+    private TextField siegeField;
+    @FXML
+    private TextField sujetStageField;
+    @FXML
+    private TextField debutMoisField;
+    @FXML
+    private TextField dureeField;
+    
 
     public void setPrimaryStage(Stage stage) {
         this.primaryStage = stage;
+        // Initialisation de conn en utilisant la méthode connect de DatabaseConnector
+        conn = DatabaseConnector.connect();
     }
 
     @FXML
@@ -52,6 +70,30 @@ public class Controller {
         // Fermer proprement l'application
         Platform.exit();
     }
-    
+    @FXML
+    public void ajouterStageFromForm() {
+        String promotion = promotionField.getText();
+        String siege = siegeField.getText();
+        String sujetStage = sujetStageField.getText();
+        String debutMois = debutMoisField.getText();
+        String duree = dureeField.getText();
+
+        try {
+            // Appel à la méthode pour ajouter le stage dans la base de données
+            DatabaseConnector.ajouterStage(conn, siege, sujetStage, debutMois, Integer.parseInt(duree), promotion);
+
+            // Vous pouvez ajouter ici un message de confirmation à l'utilisateur
+
+            // Effacer les champs après l'ajout
+            promotionField.clear();
+            siegeField.clear();
+            sujetStageField.clear();
+            debutMoisField.clear();
+            dureeField.clear();
+        } catch (SQLException e) {
+            e.printStackTrace(); // Gérez l'exception de manière appropriée
+        }
+    }
+
 }
     
