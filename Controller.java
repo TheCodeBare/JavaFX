@@ -8,11 +8,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.scene.control.TableView;
+import javafx.collections.ObservableList;
+import javafx.collections.FXCollections;
 
 public class Controller {
     private Connection conn;
     private Stage primaryStage;
-
+    @FXML
+    private TableView<Stage> stageTableView;
     @FXML
     private Pane contentPane;
 
@@ -35,11 +39,6 @@ public class Controller {
         this.primaryStage = stage;
         // Initialisation de conn en utilisant la méthode connect de DatabaseConnector
         conn = DatabaseConnector.connect();
-    }
-
-    @FXML
-    public void initialize() {
-        // Vous pouvez initialiser des éléments ici si nécessaire
     }
 
     @FXML
@@ -102,4 +101,5 @@ public class Controller {
         debutMoisField.clear();
         dureeField.clear();
     }
+
 }

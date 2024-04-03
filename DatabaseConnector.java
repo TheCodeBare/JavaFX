@@ -1,5 +1,7 @@
 import java.sql.*;
 import java.util.Scanner;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class DatabaseConnector {
     public static Connection connect() {
@@ -34,6 +36,4 @@ public class DatabaseConnector {
             statement.executeUpdate();
         }
     }
-
-    // Ajoutez les autres méthodes pour modifier, supprimer et afficher les stages
 }

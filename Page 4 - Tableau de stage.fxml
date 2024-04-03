@@ -32,20 +32,41 @@
             <Image url="@Capture_d_écran_2024-03-20_à_17.06.56-removebg-preview.png" />
          </image>
       </ImageView>
-      <TableView layoutX="14.0" layoutY="115.0" prefHeight="200.0" prefWidth="374.0" style="-fx-background-color: #fffff; -fx-border-color: #dc1010;">
-        <columns>
-          <TableColumn prefWidth="63.0" style="-fx-background-color: #dc1010;" text="Entreprise" />
-          <TableColumn prefWidth="61.0" style="-fx-background-color: #dc1010;" text="Sujet" />
-            <TableColumn prefWidth="93.0" style="-fx-background-color: #dc1010;" text="Durée du stage" />
-            <TableColumn prefWidth="87.0" style="-fx-background-color: #dc1010;" text="Date de début" />
-            <TableColumn prefWidth="68.0" style="-fx-background-color: #dc1010;" text="Promotion" />
-        </columns>
-      </TableView>
-      <ImageView fitHeight="55.0" fitWidth="78.0" layoutX="501.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../Downloads/shapes-1711100988135.png" />
-         </image>
-      </ImageView>
+      <TableView fx:id="stageTableView" layoutX="54.0" layoutY="102.0" prefHeight="296.0" prefWidth="492.0">
+    <columns>
+        <TableColumn text="ID" prefWidth="50">
+            <cellValueFactory>
+                <PropertyValueFactory property="id" />
+            </cellValueFactory>
+        </TableColumn>
+        <TableColumn text="Nom de la structure" prefWidth="150">
+            <cellValueFactory>
+                <PropertyValueFactory property="nomStructure" />
+            </cellValueFactory>
+        </TableColumn>
+        <TableColumn text="Sujet de stage" prefWidth="150">
+            <cellValueFactory>
+                <PropertyValueFactory property="sujetStage" />
+            </cellValueFactory>
+        </TableColumn>
+        <TableColumn text="Mois de début" prefWidth="100">
+            <cellValueFactory>
+                <PropertyValueFactory property="moisDebut" />
+            </cellValueFactory>
+        </TableColumn>
+        <TableColumn text="Durée" prefWidth="50">
+            <cellValueFactory>
+                <PropertyValueFactory property="duree" />
+            </cellValueFactory>
+        </TableColumn>
+        <TableColumn text="Promotion" prefWidth="100">
+            <cellValueFactory>
+                <PropertyValueFactory property="promotion" />
+            </cellValueFactory>
+        </TableColumn>
+    </columns>
+</TableView>
+
       <ImageView fitHeight="76.0" fitWidth="135.0" layoutY="324.0">
          <image>
             <Image url="@image-removebg-preview%20(2).png" />
