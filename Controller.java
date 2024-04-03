@@ -9,6 +9,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+
 public class Controller {
     private Connection conn;
     private Stage primaryStage;
@@ -47,10 +52,12 @@ public class Controller {
         loadPage("Page_Ajout_Stage.fxml", "Page Ajout Stage");
     }
 
-    @FXML
+    
+       
     public void handleListeStageButtonClick(ActionEvent event) {
-        loadPage("Page 4 - Tableau de stage.fxml", "Page liste Stage");
+    loadListeStagePage("Page 4 - Tableau de stage.fxml", "Liste des Stages");
     }
+    
 
     @FXML
     public void handleAideButtonClick(ActionEvent event) {
@@ -95,6 +102,29 @@ public class Controller {
         }
     }
 
+    
+    private void loadListeStagePage(String fxmlFile, String title) {
+    try {
+        // Charger le fichier FXML de la page Liste de stage
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
+        Parent root = loader.load();
+
+        // Récupérer le contrôleur de la page Liste de stage
+        ControllerListe controller = loader.getController();
+
+        // Passer le stage principal au contrôleur de la page Liste de stage
+        controller.setPrimaryStage(primaryStage);
+
+        // Remplacer le contenu de contentPane par la page Liste de stage
+        contentPane.getChildren().setAll(root);
+
+        // Configurer le titre de la fenêtre
+        primaryStage.setTitle(title);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+    
     private void clearFields() {
         promotionField.clear();
         siegeField.clear();
@@ -102,4 +132,5 @@ public class Controller {
         debutMoisField.clear();
         dureeField.clear();
     }
+    
 }
