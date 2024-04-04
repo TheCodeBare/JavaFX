@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=DatabaseConnector
+comment1.params=
+comment1.target=java.sql.Connection\ connect()
+comment2.params=conn
+comment2.target=void\ disconnect(java.sql.Connection)
+comment3.params=connexion\ nom_structure\ sujet_stage\ mois_debut_stage\ duree_stage\ promotion_etudiant
+comment3.target=void\ ajouterStage(java.sql.Connection,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ java.lang.String)
+numComments=4

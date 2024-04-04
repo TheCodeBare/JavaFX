@@ -1,10 +1,13 @@
+
 import java.sql.*;
 import java.util.Scanner;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class DatabaseConnector {
     public static Connection connect() {
         try {
-            String DB_URL = "jdbc:sqlite:BDDIHM.db";
+            String DB_URL = "jdbc:sqlite:C:/Users/Aymeric/AppData/Local/Temp/a8653164-5707-4ea8-9ba6-13dccfc0f668_PaintExample (4).zip.668/Projet IHM/BDDIHM.db";
             Connection conn = DriverManager.getConnection(DB_URL);
             System.out.println("Connexion à la base de données SQLite établie !");
             return conn;
@@ -34,6 +37,4 @@ public class DatabaseConnector {
             statement.executeUpdate();
         }
     }
-
-    // Ajoutez les autres méthodes pour modifier, supprimer et afficher les stages
 }
