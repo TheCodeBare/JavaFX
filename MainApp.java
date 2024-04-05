@@ -3,9 +3,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.scene.image.Image;
 
 public class MainApp extends Application {
-    
+
     @Override
     public void start(Stage primaryStage) {
         try {
@@ -22,6 +23,7 @@ public class MainApp extends Application {
 
             // Configurer le stage et afficher
             primaryStage.setScene(scene);
+            primaryStage.getIcons().add(new Image("file:1584186491754.png"));
             primaryStage.setTitle("Accueil");
             primaryStage.show();
         } catch(Exception e) {

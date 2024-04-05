@@ -7,6 +7,7 @@
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
@@ -34,11 +35,12 @@
       </ImageView>
       <TableView fx:id="stageTableView" layoutX="14.0" layoutY="115.0" prefHeight="200.0" prefWidth="374.0" style="-fx-background-color: #fffff; -fx-border-color: #dc1010;">
         <columns>
-          <TableColumn fx:id="entrepriseColumn" prefWidth="63.0" style="-fx-background-color: #dc1010;" text="Entreprise" />
-          <TableColumn fx:id="sujetColumn" prefWidth="61.0" style="-fx-background-color: #dc1010;" text="Sujet" />
-            <TableColumn fx:id="dureeColumn" prefWidth="93.0" style="-fx-background-color: #dc1010;" text="Durée du stage" />
-            <TableColumn fx:id="dateDebutColumn" prefWidth="87.0" style="-fx-background-color: #dc1010;" text="Date de début" />
-            <TableColumn fx:id="promotionColumn" prefWidth="68.0" style="-fx-background-color: #dc1010;" text="Promotion" />
+          <TableColumn fx:id="entrepriseColumn" prefWidth="63.0" style="-fx-text-fill: black;" text="Entreprise" />
+<TableColumn fx:id="sujetColumn" prefWidth="61.0" style="-fx-text-fill: black;" text="Sujet" />
+<TableColumn fx:id="dureeColumn" prefWidth="93.0" style="-fx-text-fill: black;" text="Durée du stage" />
+<TableColumn fx:id="dateDebutColumn" prefWidth="87.0" style="-fx-text-fill: black;" text="Date de début" />
+<TableColumn fx:id="promotionColumn" prefWidth="68.0" style="-fx-text-fill: black;" text="Promotion" />
+
         </columns>
       </TableView>
       <ImageView fitHeight="55.0" fitWidth="78.0" layoutX="501.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
@@ -91,6 +93,36 @@
             </Menu>
          </menus>
       </MenuBar>
-      <Button fx:id="afficherStagesButton" layoutX="73.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleAfficherStagesButtonClick" prefHeight="31.0" prefWidth="127.0" style="-fx-background-color: #ffff; -fx-border-color: #000000;" text="Afficher les stages" textFill="#dc1010" />
+      <TextField layoutX="414.0" layoutY="127.0" prefHeight="25.0" prefWidth="78.0" />
+      <TextField layoutX="413.0" layoutY="249.0" prefHeight="25.0" prefWidth="145.0" />
+      <TextField layoutX="516.0" layoutY="127.0" prefHeight="25.0" prefWidth="49.0" />
+      <TextField layoutX="414.0" layoutY="198.0" prefHeight="25.0" prefWidth="78.0" />
+      <TextField layoutX="516.0" layoutY="198.0" prefHeight="25.0" prefWidth="49.0" />
+      <Text layoutX="413.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entreprise" wrappingWidth="175.60009765625">
+         <font>
+            <Font name="Verdana Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="413.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sujet" wrappingWidth="175.60009765625">
+         <font>
+            <Font name="Verdana Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="413.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Durée" wrappingWidth="175.60009765625">
+         <font>
+            <Font name="Verdana Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="512.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" wrappingWidth="175.60009765625">
+         <font>
+            <Font name="Verdana Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="491.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Promotion" wrappingWidth="175.60009765625">
+         <font>
+            <Font name="Verdana Bold" size="16.0" />
+         </font>
+      </Text>
+      <Button layoutX="477.0" layoutY="293.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #ffff; -fx-border-color: #000000;" text="Valider" textFill="#dc1010" />
    </children>
 </Pane>
