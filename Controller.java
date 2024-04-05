@@ -15,6 +15,9 @@ import java.util.ResourceBundle;
 import java.net.URL;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.beans.value.ObservableValue;
+import javafx.beans.value.ChangeListener;
+
 
 public class Controller {
     private Connection conn;
@@ -46,6 +49,17 @@ public class Controller {
     private TextField debutMoisField;
     @FXML
     private TextField dureeField;
+    
+    @FXML
+    private TextField dateTextField;
+    @FXML
+    private TextField dureeTextField;
+    @FXML
+    private TextField promotionTextField;
+    @FXML
+    private TextField entrepriseTextField;
+    @FXML
+    private TextField sujetTextField;
 
     public void setPrimaryStage(Stage stage) {
         this.primaryStage = stage;
@@ -122,9 +136,36 @@ public class Controller {
     }
 
     @FXML
-    private void initialize() {
-        initializeTableView();
+private void initialize() {
+    // Initialisation des colonnes de TableView (existante)
+    initializeTableView();
+
+    // Vérifier si vous êtes sur la page "Page 4 - Liste des stages.fxml"
+    if (primaryStage.getTitle().equals("Page 4 - Tableau de stage.fxml")) {
+        // Ajout d'un écouteur pour détecter les changements de sélection dans la TableView
+        stageTableView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<StageData>() {
+            @Override
+            public void changed(ObservableValue<? extends StageData> observable, StageData oldValue, StageData newValue) {
+                if (newValue != null) {
+                    // Lorsqu'un élément est sélectionné, afficher ses informations dans les champs textuels correspondants
+                    sujetTextField.setText(newValue.getSujet());
+                    entrepriseTextField.setText(newValue.getEntreprise());
+                    promotionTextField.setText(newValue.getPromotion());
+                    dureeTextField.setText(newValue.getDuree());
+                    dateTextField.setText(newValue.getDateDebut());
+                } else {
+                    // Si aucun élément n'est sélectionné, effacer les champs textuels
+                    sujetTextField.clear();
+                    entrepriseTextField.clear();
+                    promotionTextField.clear();
+                    dureeTextField.clear();
+                    dateTextField.clear();
+                }
+            }
+        });
     }
+}
+
 
     private void initializeTableView() {
         if (entrepriseColumn != null && sujetColumn != null && dureeColumn != null &&

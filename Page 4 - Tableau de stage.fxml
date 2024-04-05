@@ -7,6 +7,7 @@
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
@@ -92,6 +93,36 @@
             </Menu>
          </menus>
       </MenuBar>
-      <Button fx:id="afficherStagesButton" layoutX="73.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleAfficherStagesButtonClick" prefHeight="31.0" prefWidth="127.0" style="-fx-background-color: #ffff; -fx-border-color: #000000;" text="Afficher les stages" textFill="#dc1010" />
+      <TextField fx:id="sujetTextField" layoutX="414.0" layoutY="127.0" prefHeight="25.0" prefWidth="78.0" />
+      <TextField fx:id="entrepriseTextField" layoutX="413.0" layoutY="249.0" prefHeight="25.0" prefWidth="145.0" />
+      <TextField fx:id="promotionTextField" layoutX="516.0" layoutY="127.0" prefHeight="25.0" prefWidth="49.0" />
+      <TextField fx:id="dureeTextField" layoutX="414.0" layoutY="198.0" prefHeight="25.0" prefWidth="78.0" />
+      <TextField fx:id="dateTextField" layoutX="516.0" layoutY="198.0" prefHeight="25.0" prefWidth="49.0" />
+      <Text layoutX="413.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entreprise" wrappingWidth="175.60009765625">
+         <font>
+            <Font name="Verdana Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="413.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sujet" wrappingWidth="175.60009765625">
+         <font>
+            <Font name="Verdana Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="413.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Durée" wrappingWidth="175.60009765625">
+         <font>
+            <Font name="Verdana Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="512.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" wrappingWidth="175.60009765625">
+         <font>
+            <Font name="Verdana Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="491.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Promotion" wrappingWidth="175.60009765625">
+         <font>
+            <Font name="Verdana Bold" size="16.0" />
+         </font>
+      </Text>
+      <Button layoutX="477.0" layoutY="293.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #ffff; -fx-border-color: #000000;" text="Valider" textFill="#dc1010" />
    </children>
 </Pane>
