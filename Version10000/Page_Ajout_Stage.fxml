@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="contentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dc1010" height="45.0" layoutX="174.0" layoutY="45.0" stroke="BLACK" strokeType="INSIDE" width="252.0" />
+      <Text fill="WHITE" layoutX="201.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GPHY - STAGES" wrappingWidth="198.4964599609375">
+         <font>
+            <Font name="Georgia" size="24.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="55.0" fitWidth="78.0" layoutX="501.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@shapes-1711101578349.png" />
+         </image></ImageView>
+      <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="10.0" layoutY="35.0">
+         <image>
+            <Image url="@shapes-1711101448316.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="106.0" fitWidth="168.0" layoutY="294.0">
+         <image>
+            <Image url="@image-removebg-preview%20(2).png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="296.0" layoutX="84.0" layoutY="102.0" stroke="BLACK" strokeType="INSIDE" width="422.0" />
+      <Text layoutX="91.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saisir un stage - Formulaire" wrappingWidth="321.82977294921875">
+         <font>
+            <Font name="Georgia" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="106.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Promotion : " wrappingWidth="78.0" />
+      <Text layoutX="314.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Siège :" wrappingWidth="66.13671875" />
+      <Text layoutX="106.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Sujet de Stage :" wrappingWidth="101.00000000000006" />
+      <Text layoutX="106.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Début de stage (mois) :" wrappingWidth="155.60333251953125" />
+      <ImageView fitHeight="76.0" fitWidth="78.0" layoutX="508.0" layoutY="14.0">
+         <image>
+            <Image url="@Capture_d_écran_2024-03-20_à_17.06.56-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="106.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Durée stage (mois):" wrappingWidth="122.27008056640625" />
+      <Button layoutX="271.0" layoutY="335.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #dc1010; -fx-border-color: #000000;" text="Annuler" />
+      <Button id="Validé" layoutX="373.0" layoutY="335.0" mnemonicParsing="false" onAction="#ajouterStageFromForm" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #4bcc37; -fx-border-color: #000000;" text="Valider" />
+      <TextField fx:id="promotionField" layoutX="184.0" layoutY="147.0" prefHeight="25.0" prefWidth="101.0" />
+<TextField fx:id="siegeField" layoutX="365.0" layoutY="147.0" prefHeight="25.0" prefWidth="122.0" />
+<TextField fx:id="sujetStageField" layoutX="201.0" layoutY="188.0" />
+<TextField fx:id="debutMoisField" layoutX="247.0" layoutY="238.0" prefHeight="17.0" prefWidth="149.0" />
+<TextField fx:id="dureeField" layoutX="225.0" layoutY="282.0" />
+
+      <MenuBar id="barremenu" prefHeight="27.0" prefWidth="600.0" style="-fx-background-color: #dc1010;">
+         <menus>
+            <Menu mnemonicParsing="false" text="Saisir un stage">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleSaisirUnStageButtonClick" text="Ajouter un stage" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Liste des stages">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleListeStageButtonClick" text="Liste de stage" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Aide">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleAideButtonClick" text="FAQ" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" onAction="#handleQuitterButtonClick" text="Quitter">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleQuitterButtonClick" text="Quitter" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</Pane>
