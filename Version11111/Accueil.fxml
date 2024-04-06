@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="contentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dc1010" height="45.0" layoutX="174.0" layoutY="45.0" stroke="BLACK" strokeType="INSIDE" width="252.0" />
+      <Text fill="WHITE" layoutX="204.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GPHY - STAGES" wrappingWidth="192.096435546875">
+         <font>
+            <Font name="Georgia" size="24.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="97.0" fitWidth="130.0" layoutX="14.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="97.0" fitWidth="101.0" layoutX="27.0" layoutY="19.0">
+         <image>
+            <Image url="@GPHY-Stage-copy-copy/1584186491754.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="106.0" fitWidth="168.0" layoutY="294.0">
+         <image>
+            <Image url="@GPHY-Stage-copy-copy/image-removebg-preview%20(2).png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="106.0" layoutX="132.0" layoutY="288.0" stroke="BLACK" strokeType="INSIDE" width="337.0" />
+      <Text layoutX="204.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contactez nous !" wrappingWidth="198.4964599609375">
+         <font>
+            <Font name="Georgia" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="167.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Tel : " wrappingWidth="66.13671875" />
+      <Text layoutX="167.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Mail :" wrappingWidth="66.13671875" />
+      <Text layoutX="377.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Facebook :" wrappingWidth="66.13671875" />
+      <Text layoutX="377.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Instagram :" wrappingWidth="74.93670654296875" />
+      <ImageView fitHeight="83.0" fitWidth="141.0" layoutX="-1.0" layoutY="322.0">
+         <image>
+            <Image url="@image-removebg-preview%20(2).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="14.0" layoutY="49.0">
+         <image>
+            <Image url="@1584186491754.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="89.0" fitWidth="101.0" layoutX="485.0" layoutY="42.0">
+         <image>
+            <Image url="@Capture%20d’écran%202024-03-20%20à%2017.06.56%20(1).png" />
+         </image>
+      </ImageView>
+      <Text layoutX="163.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue sur cette application de gestion de stage !" />
+      <Text layoutX="163.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tu dois être heureux d'avoir des nouvelles de tes stages, " />
+      <Text layoutX="163.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="alors viens inscrire ces informations. " />
+      <Text layoutX="163.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tu peux accéder aux différentes options du site avec le" />
+      <Text layoutX="163.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="menu en haut de l'application" />
+      <MenuBar id="barremenu" layoutX="-1.0" prefHeight="27.0" prefWidth="600.0" style="-fx-background-color: #dc1010;">
+        <menus>
+          <Menu mnemonicParsing="false" text="Saisir un stage">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleSaisirUnStageButtonClick" text="Ajouter un stage" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Liste des stages">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleListeStageButtonClick" text="Liste de stage" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Aide">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleAideButtonClick" text="FAQ" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Quitter">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleQuitterButtonClick" text="Quitter l'application" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</Pane>
