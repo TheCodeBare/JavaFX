@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="contentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dc1010" height="31.0" layoutX="168.0" layoutY="40.0" stroke="BLACK" strokeType="INSIDE" width="222.0" />
+      <Text fill="WHITE" layoutX="189.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GPHY - STAGES" wrappingWidth="198.4964599609375">
+         <font>
+            <Font name="Georgia" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List of Internships" wrappingWidth="289.20001220703125">
+         <font>
+            <Font name="Verdana Bold" size="24.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="76.0" fitWidth="78.0" layoutX="501.0" layoutY="40.0">
+         <image>
+            <Image url="@Capture_d_écran_2024-03-20_à_17.06.56-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="stageTableView" layoutX="14.0" layoutY="115.0" prefHeight="200.0" prefWidth="374.0" style="-fx-background-color: #fffff; -fx-border-color: #dc1010;">
+        <columns>
+          <TableColumn fx:id="entrepriseColumn" prefWidth="63.0" style="-fx-text-fill: black;" text="Entreprise" />
+<TableColumn fx:id="sujetColumn" prefWidth="61.0" style="-fx-text-fill: black;" text="Sujet" />
+<TableColumn fx:id="dureeColumn" prefWidth="93.0" style="-fx-text-fill: black;" text="Durée du stage" />
+<TableColumn fx:id="dateDebutColumn" prefWidth="87.0" style="-fx-text-fill: black;" text="Date de début" />
+<TableColumn fx:id="promotionColumn" prefWidth="68.0" style="-fx-text-fill: black;" text="Promotion" />
+
+        </columns>
+      </TableView>
+      <ImageView fitHeight="55.0" fitWidth="78.0" layoutX="501.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/shapes-1711100988135.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="76.0" fitWidth="135.0" layoutY="324.0">
+         <image>
+            <Image url="@image-removebg-preview%20(2).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="10.0" layoutY="35.0">
+         <image>
+            <Image url="@../../../../../Downloads/shapes-1711100991698.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="deleteButton" layoutX="295.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleSupprimerButton" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #ffff; -fx-border-color: #000000;" text="Delete" textFill="#dc1010" />
+      <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="10.0" layoutY="35.0">
+         <image>
+            <Image url="@1584186491754.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="sujetTextField" layoutX="414.0" layoutY="127.0" prefHeight="25.0" prefWidth="78.0" />
+      <TextField fx:id="entrepriseTextField" layoutX="413.0" layoutY="249.0" prefHeight="25.0" prefWidth="145.0" />
+      <TextField fx:id="promotionTextField" layoutX="516.0" layoutY="127.0" prefHeight="25.0" prefWidth="49.0" />
+      <TextField fx:id="dureeTextField" layoutX="414.0" layoutY="198.0" prefHeight="25.0" prefWidth="78.0" />
+      <TextField fx:id="dateTextField" layoutX="516.0" layoutY="198.0" prefHeight="25.0" prefWidth="49.0" />
+      <Text layoutX="413.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company" wrappingWidth="175.60009765625">
+         <font>
+            <Font name="Verdana Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="413.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject" wrappingWidth="175.60009765625">
+         <font>
+            <Font name="Verdana Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="413.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Length" wrappingWidth="175.60009765625">
+         <font>
+            <Font name="Verdana Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="512.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" wrappingWidth="175.60009765625">
+         <font>
+            <Font name="Verdana Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="491.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Promotion" wrappingWidth="175.60009765625">
+         <font>
+            <Font name="Verdana Bold" size="16.0" />
+         </font>
+      </Text>
+      <Button layoutX="477.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleValiderButtonClick" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #ffff; -fx-border-color: #000000;" text="Confirm" textFill="#dc1010" />
+      <MenuBar id="barremenu" prefHeight="27.0" prefWidth="600.0" style="-fx-background-color: #dc1010;">
+         <menus>
+            <Menu mnemonicParsing="false" text="Enter a internship">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleSaisirUnStageButtonClick" text="Add an intership" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="List of internships">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleListeStageButtonClick" text="See the list of internships" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleAideButtonClick" text="FAQs" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Quit">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleQuitterButtonClick" text="Quit the application" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</Pane>
